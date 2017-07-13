@@ -1,0 +1,39 @@
+<a href="#/home/{{menuID}}">Home</a> 
+<a href="#/profile/{{menuID}}">Profile</a> 
+<a href="#/message/{{menuID}}">Message</a> 
+<a href="#/logout">Log Out</a> 
+
+<br/>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <div class="account-wall">
+        <form data-ng-submit="emailMessage()">
+          <input type="text" class="form-control" placeholder="Email Address" data-ng-model="composeEmail" required autofocus>
+          <input type="text" class="form-control" placeholder="Subject" data-ng-model="subject" required autofocus>
+           <input type="text" class="form-control" placeholder="comment" data-ng-model="mycomment" required autofocus>
+           <input  type="submit" class="btn btn-lg btn-info" value="Send" />
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<table border = "1px">
+    <tr>
+        <th>from</th>
+  
+        <th>subject</th>
+      
+        <th>note</th>
+    
+        <tr tr-row ng-repeat="row in data" scdata="d">
+        <td ng-bind="row.from"></td><td>
+          <strong ng-bind="row.subject"></strong></td>
+          <td ng-bind="row.note"></td></tr>
+
+</table>
+
